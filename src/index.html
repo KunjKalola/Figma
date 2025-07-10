@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Figma-Demo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+  
+  <!-- Navbar -->
+<nav class="bg-white shadow-md">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center space-x-2">
+    <img src="/assets/images/vpn.png">
+    </div>
+   
+    <ul class="hidden md:flex space-x-6 text-gray-700 font-[500]">
+      <li><a href="#" class="hover:text-red-500">About</a></li>
+      <li><a href="#" class="hover:text-red-500">Features</a></li>
+      <li><a href="#" class="hover:text-red-500">Pricing</a></li>
+      <li><a href="#" class="hover:text-red-500">Testimonials</a></li>
+      <li><a href="#" class="hover:text-red-500">Help</a></li>
+    </ul>
+
+<div class="flex items-center space-x-4 font-[Rubik]">
+  <a href="#" class="text-[#0B132A] font-[500]">Sign In</a>
+  <a href="#" class="text-[#F53855] font-[500] border border-[#F53855] px-6 py-2 rounded-full hover:bg-[#F53855] hover:text-white transition">
+    Sign Up
+  </a>
+</div>
+  </div>
+</nav>
+
+  <!-- Hero Section -->
+<section class="bg-white py-20 px-6 md:px-12 font-[Rubik]">
+  <div class="max-w-7xl ml-[85px] flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+
+    <div class="md:w-1/2 text-center md:text-left space-y-6 leading-[70px]">
+      <h1 class="text-[36px] md:text-[48px] font-[500] text-[#0B132A] leading-[70px] w-[555px] h-[140px]">
+        Want anything to be <br />
+        easy with <span class="font-[700] text-[50px]">LaslesVPN.</span>
+      </h1>
+      <p class="text-gray-500 text-base text-[#4F5665]">
+        Provide a network for all your needs with ease and fun using <strong class="text-[#4F5665]">LaslesVPN</strong><br />
+        discover interesting features from us.
+      </p>
+      <a href="#"
+         class="inline-block bg-[#F53838] hover:bg-[#e82f2f] text-white text-[16px] font-[700] leading-[25px] w-[250px] h-[60px] py-4 rounded-[10px] text-center shadow-lg transition">
+        Get Started
+      </a>
+    </div>
+    
+    <div class="md:w-1/2">
+      <img src="/assets/images/illustrate.png" alt="Hero Illustration" class="w-[611px] h-[382px]">
+    </div>
+
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="bg-white py-10">
+  <div class="w-[1140px] h-[200px] mx-auto grid grid-cols-1 md:grid-cols-3 shadow-md rounded-[10px] overflow-hidden  divide-y md:divide-y-0 md:divide-x divide-gray-200">
+    
+    <!-- Users -->
+    <div class="py-6 px-6 flex justify-center items-center gap-[36px]">
+      <div class="flex items-center justify-center w-14 h-14 rounded-full bg-red-100">
+        <svg class="w-[55px] h-6" viewBox="0 0 24 24" fill="#E03131" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 13C14.2091 13 16 11.2091 16 9C16 6.79086 14.2091 5 12 5C9.79086 5 8 6.79086 8 9C8 11.2091 9.79086 13 12 13Z" />
+          <path d="M18 19C18 16.2386 15.3137 14 12 14C8.68629 14 6 16.2386 6 19H18Z" />
+        </svg>
+      </div>
+      <div>
+        <h2 class="font-[Rubik] font-[700] text-[25px] leading-[30px] font-[#0B132A]">90+</h2>
+        <p class="font-[400] text-[20px] leading-[;30px] font-[#4F5665]">Users</p>
+      </div>
+    </div>
+
+    <!-- Locations -->
+    <div class="py-6 px-6 flex justify-center items-center gap-[36px]">
+      <div class="flex items-center justify-center w-14 h-14 rounded-full bg-red-100">
+        <svg class="w-[55px] h-6" viewBox="0 0 24 24" fill="#E03131" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C8.13 2 5 5.13 5 9C5 13.25 9.55 18.36 11.29 20.28C11.68 20.72 12.32 20.72 12.71 20.28C14.45 18.36 19 13.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"/>
+        </svg>
+      </div>
+      <div>
+        <h2 class="font-[Rubik] font-[700] text-[25px] leading-[30px] font-[#0B132A]">30+</h2>
+        <p class="font-[400] text-[20px] leading-[;30px] font-[#4F5665]">Locations</p>
+      </div>
+    </div>
+
+    <!-- Servers -->
+    <div class="py-6 px-6 flex justify-center items-center gap-[36px]">
+      <div class="flex items-center justify-center w-14 h-14 rounded-full bg-red-100">
+        <svg class="w-[55px] h-6" viewBox="0 0 24 24" fill="#E03131" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6C4 4.9 4.9 4 6 4H18C19.1 4 20 4.9 20 6V8C20 9.1 19.1 10 18 10H6C4.9 10 4 9.1 4 8V6ZM6 6V8H18V6H6ZM4 14C4 12.9 4.9 12 6 12H18C19.1 12 20 12.9 20 14V16C20 17.1 19.1 18 18 18H6C4.9 18 4 17.1 4 16V14ZM6 14V16H18V14H6Z"/>
+          <circle cx="7" cy="7" r="1" fill="#E03131"/>
+          <circle cx="7" cy="15" r="1" fill="#E03131"/>
+        </svg>
+      </div>
+      <div>
+        <h2 class="font-[Rubik] font-[700] text-[25px] leading-[30px] font-[#0B132A]">50+</h2>
+        <p class="font-[400] text-[20px] leading-[;30px] font-[#4F5665]">Servers</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Features Section -->
+   <section class="py-20 px-6 md:px-16 bg-white">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+
+      <div class="md:w-1/2 flex justify-center">
+        <img src="/assets/images/illustrate1.svg" alt="Features Illustration" class="w-[508px] max-w-md h-[414px]" />
+      </div>
+ 
+      <div class="md:w-1/2">
+        <h2 class="text-[35px] text-[#0B132A] leading-[50px] mb-5 font-[500] w-[383px] h-[100px]">
+          We Provide Many<br />
+          Features You Can Use
+        </h2>
+        <p class="text-[#4F5665] text-base mb-8 leading-relaxed">
+          You can explore the features that we provide with fun and have their own functions each feature.
+        </p>
+
+        <ul class="space-y-5 text-[#4F5665] text-base">
+          <li class="flex items-start gap-3">
+            <img src="/assets/images/right.svg">
+            Powerfull online protection.
+          </li>
+          <li class="flex items-start gap-3">
+             <img src="/assets/images/right.svg">
+            Internet without borders.
+          </li>
+          <li class="flex items-start gap-3">
+            <img src="/assets/images/right.svg">
+            Supercharged VPN
+          </li>
+          <li class="flex items-start gap-3">
+            <img src="/assets/images/right.svg">
+            No specific time limits.
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+<!--  Plans Section -->
+<section class="bg-white py-16">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-gray-900 mb-4">Choose Your Plan</h2>
+    <p class="text-gray-600 mb-10 max-w-xl mx-auto">
+      Let's choose the package that is best for you and explore it happily and cheerfully.
+    </p>
+
+    <div class="grid gap-6 md:grid-cols-3">
+      <!-- Free Plan -->
+      <div class="border rounded-lg p-8 flex flex-col items-center shadow-sm hover:shadow-lg transition">
+        <img src="/assets/images/gift.svg" alt="Free Plan" class="w-20 mb-4" />
+        <h3 class="text-lg font-semibold mb-4">Free Plan</h3>
+        <ul class="text-sm text-gray-700 space-y-2 mb-24 text-left">
+          <li>✔ Unlimited Bandwidth</li>
+          <li>✔ Encrypted Connection</li>
+          <li>✔ No Traffic Logs</li>
+          <li>✔ Works on All Devices</li>
+        </ul>
+        <p class="text-xl font-bold mb-4">Free</p>
+        <button class="border border-red-500 text-red-500 px-6 py-2 rounded-full hover:bg-red-500 hover:text-white transition">
+          Select
+        </button>
+      </div>
+
+      <!-- Standard Plan -->
+      <div class="border rounded-lg p-8 flex flex-col items-center shadow-sm hover:shadow-lg transition">
+        <img src="/assets/images/gift.svg" alt="Standard Plan" class="w-20 mb-4" />
+        <h3 class="text-lg font-semibold mb-4">Standard Plan</h3>
+        <ul class="text-sm text-gray-700 space-y-2 mb-16 text-left">
+          <li>✔ Unlimited Bandwidth</li>
+          <li>✔ Encrypted Connection</li>
+          <li>✔ Yes Traffic Logs</li>
+          <li>✔ Works on All Devices</li>
+          <li>✔ Connect Anywhere</li>
+        </ul>
+        <p class="text-xl font-bold mb-4">$9 <span class="text-sm font-medium text-gray-500">/ mo</span></p>
+        <button class="border border-red-500 text-red-500 px-6 py-2 rounded-full hover:bg-red-500 hover:text-white transition">
+          Select
+        </button>
+      </div>
+
+      <!-- Premium Plan -->
+      <div class="border-2 border-red-500 rounded-lg p-8 flex flex-col items-center shadow-lg">
+        <img src="/assets/images/gift.svg" alt="Premium Plan" class="w-20 mb-4" />
+        <h3 class="text-lg font-semibold mb-4">Premium Plan</h3>
+        <ul class="text-sm text-gray-700 space-y-2 mb-10 text-left">
+          <li>✔ Unlimited Bandwidth</li>
+          <li>✔ Encrypted Connection</li>
+          <li>✔ Yes Traffic Logs</li>
+          <li>✔ Works on All Devices</li>
+          <li>✔ Connect Anywhere</li>
+          <li>✔ Get New Features</li>
+        </ul>
+        <p class="text-xl font-bold mb-4">$12 <span class="text-sm font-medium text-gray-500">/ mo</span></p>
+        <button class="bg-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600 transition">
+          Select
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VPN Network Map Section -->
+<section class="bg-white py-20">
+  <div class="text-center px-6">
+    <h2 class="text-3xl font-bold text-gray-900 mb-4">
+      Huge Global Network <br /> of Fast VPN
+    </h2>
+    <p class="text-gray-600 max-w-xl mx-auto">
+      See <span class="font-semibold text-gray-900">LaslesVPN</span> everywhere to make it easier for you when you move locations.
+    </p>
+  </div>
+
+  <div class="mt-12 flex justify-center">
+    <img src="/assets/images/global.svg" alt="World Map with Locations" class="w-[1060px] h-[537px]" />
+  </div>
+
+  <!-- Partner Logos -->
+  <div class="flex justify-center items-center flex-wrap gap-10 mt-24 px-4">
+    <img src="/assets/images/netflix.png" alt="Netflix" class="h-16 opacity-100" />
+    <img src="/assets/images/reddit.png" alt="Reddit" class="h-16 opacity-100" />
+    <img src="/assets/images/amazon.png" alt="Amazon" class="h-16 opacity-100" />
+    <img src="/assets/images/discord.png" alt="Discord" class="h-16 opacity-100" />
+    <img src="/assets/images/spotify.png" alt="Spotify" class="h-16opacity-100" />
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="bg-white py-20">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-gray-900 mb-4">Trusted by Thousands of<br />Happy Customer</h2>
+    <p class="text-gray-600 max-w-2xl mx-auto mb-12">
+      These are the stories of our customers who have joined us with great pleasure when using this crazy feature.
+    </p>
+    <div class="grid md:grid-cols-3 gap-6 items-stretch">
+      <!-- Card 1 -->
+      <div class="border-2 border-red-500 rounded-lg p-6 shadow-md flex flex-col justify-between">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User 1" class="w-10 h-10 rounded-full" />
+            <div class="text-left">
+              <h4 class="font-semibold text-sm">Viezh Robert</h4>
+              <p class="text-xs text-gray-500">Warsaw, Poland</p>
+            </div>
+          </div>
+          <div class="text-sm font-semibold text-gray-700 flex items-center gap-1">
+            4.5
+            <img src="/assets/images/star.png" alt="star" class="w-4 h-4" />
+          </div>
+        </div>
+        <p class="text-sm text-gray-700 text-left mt-2">
+          “Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best”.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="border rounded-lg p-6 shadow-sm flex flex-col justify-between">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="User 2" class="w-10 h-10 rounded-full" />
+            <div class="text-left">
+              <h4 class="font-semibold text-sm">Yessica Christy</h4>
+              <p class="text-xs text-gray-500">Shanxi, China</p>
+            </div>
+          </div>
+          <div class="text-sm font-semibold text-gray-700 flex items-center gap-1">
+            4.5
+            <img src="/assets/images/star.png" alt="star" class="w-4 h-4" />
+          </div>
+        </div>
+        <p class="text-sm text-gray-700 text-left mt-2">
+          “I like it because I like to travel far and still can connect with high speed.”
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="border rounded-lg p-6 shadow-sm flex flex-col justify-between">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="User 3" class="w-10 h-10 rounded-full" />
+            <div class="text-left">
+              <h4 class="font-semibold text-sm">Kim Young Jou</h4>
+              <p class="text-xs text-gray-500">Seoul, South Korea</p>
+            </div>
+          </div>
+          <div class="text-sm font-semibold text-gray-700 flex items-center gap-1">
+            4.5
+            <img src="/assets/images/star.png" alt="star" class="w-4 h-4" />
+          </div>
+        </div>
+        <p class="text-sm text-gray-700 text-left mt-2">
+          “This is very unusual for my business that currently requires a virtual private network that has high security.”
+        </p>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="flex justify-between items-center mt-10 px-4 md:px-16">
+      <!-- Dots -->
+      <div class="flex space-x-2">
+        <span class="w-3 h-3 bg-red-500 rounded-full"></span>
+        <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+        <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+      </div>
+
+      <!-- Arrows -->
+      <div class="flex items-center gap-4">
+        <button class="w-10 h-10 rounded-full border border-red-500 text-red-500 hover:bg-red-100 transition">
+          <svg fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5 mx-auto">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+          </svg>
+        </button>
+        <button class="w-10 h-10 rounded-full bg-red-500 text-white hover:bg-red-600 transition">
+          <svg fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5 mx-auto">
+            <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Subscribe Now Section -->
+  <section class="max-w-6xl mx-auto px-6 py-16">
+      <div class="bg-white rounded-xl shadow-xl p-10 flex flex-col md:flex-row items-center justify-between">
+        <div class="text-center md:text-left mb-6 md:mb-0">
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800">
+            Subscribe Now for <br />
+            Get Special Features!
+          </h2>
+          <p class="mt-2 text-sm text-gray-500">Let's subscribe with us and find the fun.</p>
+        </div>
+        <button class="bg-red-500 hover:bg-red-600 text-white font-medium px-6 py-3 rounded-xl shadow-md transition">
+          Subscribe Now
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-50 pt-10 pb-6">
+      <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 text-sm text-gray-500">
+        <!-- Brand Info -->
+        <div>
+          <div class="flex items-center mb-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" class="h-6 w-6 mr-2" alt="VPN Logo" />
+            <h3 class="text-lg font-bold text-gray-800">LaslesVPN</h3>
+          </div>
+          <p class="mb-4">LaslesVPN is a private virtual network that has unique features and high security.</p>
+          <div class="flex space-x-3">
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" class="h-5 w-5" /></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" class="h-5 w-5" /></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733614.png" class="h-5 w-5" /></a>
+          </div>
+          <p class="mt-4 text-xs">©2020LaslesVPN</p>
+        </div>
+
+        <!-- Product -->
+        <div>
+          <h4 class="text-md font-bold text-gray-800 mb-4">Product</h4>
+          <ul class="space-y-2">
+            <li><a href="#">Download</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Server</a></li>
+            <li><a href="#">Countries</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- Engage -->
+        <div>
+          <h4 class="text-md font-bold text-gray-800 mb-4">Engage</h4>
+          <ul class="space-y-2">
+            <li><a href="#">LaslesVPN ?</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Earn Money -->
+        <div>
+          <h4 class="text-md font-bold text-gray-800 mb-4">Earn Money</h4>
+          <ul class="space-y-2">
+            <li><a href="#">Affiliate</a></li>
+            <li><a href="#">Become Partner</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+</body>
+</html>

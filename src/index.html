@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Figma-Demo</title>
   <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -82,7 +84,7 @@
       </div>
 
       <div class="md:w-1/2 flex justify-center md:justify-end">
-        <img src="../assets/images/illustrate.png" alt="Hero Illustration" class="w-full max-w-[450px] h-auto md:max-w-[611px] md:h-[382px]">
+        <img src="../assets/images/illustrate.png" alt="Hero Illustration" class="w-full object-contain max-w-[450px] h-auto md:max-w-[611px] md:h-[382px]">
       </div>
 
     </div>
@@ -253,93 +255,256 @@
     </div>
   </section>
   <!-- Testimonials Section -->
-  <section class="bg-white py-12 md:py-20 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto text-center">
-      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Trusted by Thousands of<br class="hidden md:block" />Happy Customer</h2>
-      <p class="text-gray-600 max-w-2xl mx-auto mb-8 md:mb-12">
-        These are the stories of our customers who have joined us with great pleasure when using this crazy feature.
-      </p>
-      <div class="grid gap-6 md:grid-cols-3 items-stretch">
-        <div class="border-2 border-red-500 rounded-lg p-6 shadow-md flex flex-col justify-between">
-          <div class="flex items-center justify-between mb-4">
-            <div class="flex items-center gap-3">
-              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User 1" class="w-10 h-10 rounded-full" />
-              <div class="text-left">
-                <h4 class="font-semibold text-sm">Viezh Robert</h4>
-                <p class="text-xs text-gray-500">Warsaw, Poland</p>
-              </div>
-            </div>
-            <div class="text-sm font-semibold text-gray-700 flex items-center gap-1">
-              4.5
-              <img src="../assets/images/star.png" alt="star" class="w-4 h-4" />
-            </div>
-          </div>
-          <p class="text-sm text-gray-700 text-left mt-2">
-            “Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best”.
-          </p>
-        </div>
+<section class="bg-white py-12 md:py-20 px-4 sm:px-6 lg:px-8 font-[Rubik]">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+      Trusted by Thousands of<br class="hidden md:block" />Happy Customer
+    </h2>
+    <p class="text-gray-600 max-w-2xl mx-auto mb-8 md:mb-12">
+      These are the stories of our customers who have joined us with great pleasure when using this crazy feature.
+    </p>
 
-        <div class="border rounded-lg p-6 shadow-sm flex flex-col justify-between">
-          <div class="flex items-center justify-between mb-4">
-            <div class="flex items-center gap-3">
-              <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="User 2" class="w-10 h-10 rounded-full" />
-              <div class="text-left">
-                <h4 class="font-semibold text-sm">Yessica Christy</h4>
-                <p class="text-xs text-gray-500">Shanxi, China</p>
+    <div class="splide" id="testimonial-carousel">
+      <div class="splide__track">
+        <ul class="splide__list items-stretch">
+          <li class="splide__slide p-2">
+            <div class="card border-2 border-red-500 rounded-lg p-6 shadow-md flex flex-col justify-between h-full">
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User 1" class="w-10 h-10 rounded-full" />
+                  <div class="text-left">
+                    <h4 class="font-semibold text-sm">Viezh Robert</h4>
+                    <p class="text-xs text-gray-500">Warsaw, Poland</p>
+                  </div>
+                </div>
+                <div class="text-sm font-semibold text-gray-700 flex items-center gap-1">
+                  4.5 <img src="../assets/images/star.png" alt="star" class="w-4 h-4" />
+                </div>
               </div>
+              <p class="text-sm text-gray-700 text-left mt-2">
+                “Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best”.
+              </p>
             </div>
-            <div class="text-sm font-semibold text-gray-700 flex items-center gap-1">
-              4.5
-              <img src="../assets/images/star.png" alt="star" class="w-4 h-4" />
-            </div>
-          </div>
-          <p class="text-sm text-gray-700 text-left mt-2">
-            “I like it because I like to travel far and still can connect with high speed.”
-          </p>
-        </div>
+          </li>
 
-        <div class="border rounded-lg p-6 shadow-sm flex flex-col justify-between">
-          <div class="flex items-center justify-between mb-4">
-            <div class="flex items-center gap-3">
-              <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="User 3" class="w-10 h-10 rounded-full" />
-              <div class="text-left">
-                <h4 class="font-semibold text-sm">Kim Young Jou</h4>
-                <p class="text-xs text-gray-500">Seoul, South Korea</p>
+          <li class="splide__slide p-2">
+            <div class="card border rounded-lg p-6 shadow-sm flex flex-col justify-between h-full">
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="User 2" class="w-10 h-10 rounded-full" />
+                  <div class="text-left">
+                    <h4 class="font-semibold text-sm">Yessica Christy</h4>
+                    <p class="text-xs text-gray-500">Shanxi, China</p>
+                  </div>
+                </div>
+                <div class="text-sm font-semibold text-gray-700 flex items-center gap-1">
+                  4.5 <img src="../assets/images/star.png" alt="star" class="w-4 h-4" />
+                </div>
               </div>
+              <p class="text-sm text-gray-700 text-left mt-2">
+                “I like it because I like to travel far and still can connect with high speed.”
+              </p>
             </div>
-            <div class="text-sm font-semibold text-gray-700 flex items-center gap-1">
-              4.5
-              <img src="../assets/images/star.png" alt="star" class="w-4 h-4" />
+          </li>
+
+          <li class="splide__slide p-2">
+            <div class="card border rounded-lg p-6 shadow-sm flex flex-col justify-between h-full">
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="User 3" class="w-10 h-10 rounded-full" />
+                  <div class="text-left">
+                    <h4 class="font-semibold text-sm">Kim Young Jou</h4>
+                    <p class="text-xs text-gray-500">Seoul, South Korea</p>
+                  </div>
+                </div>
+                <div class="text-sm font-semibold text-gray-700 flex items-center gap-1">
+                  4.5 <img src="../assets/images/star.png" alt="star" class="w-4 h-4" />
+                </div>
+              </div>
+              <p class="text-sm text-gray-700 text-left mt-2">
+                “This is very unusual for my business that currently requires a VPN that has high security.”
+              </p>
             </div>
-          </div>
-          <p class="text-sm text-gray-700 text-left mt-2">
-            “This is very unusual for my business that currently requires a virtual private network that has high security.”
-          </p>
-        </div>
+          </li>
+        </ul>
       </div>
 
-      <div class="flex justify-between items-center mt-8 md:mt-10 px-4 md:px-16">
-        <div class="flex space-x-2">
-          <span class="w-3 h-3 bg-red-500 rounded-full"></span>
-          <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
-          <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
-        </div>
-
-        <div class="flex items-center gap-4">
-          <button class="w-10 h-10 rounded-full border border-red-500 text-red-500 hover:bg-red-100 transition">
-            <svg fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5 mx-auto">
-              <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-            </svg>
-          </button>
-          <button class="w-10 h-10 rounded-full bg-red-500 text-white hover:bg-red-600 transition">
-            <svg fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5 mx-auto">
-              <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
-            </svg>
-          </button>
-        </div>
+      <div class="my-slider-progress mt-4 max-w-[calc(100%-8rem)] mx-auto">
+        <div class="my-slider-progress-bar"></div>
       </div>
     </div>
-  </section>
+
+    <div class="flex justify-between items-center mt-8 md:mt-10 px-4 md:px-16">
+      <div class="splide__pagination flex space-x-2">
+        </div>
+
+      <div class="flex items-center gap-4">
+        <button id="prev-testimonial" class="w-10 h-10 rounded-full border border-red-500 text-red-500 hover:bg-red-100 transition">
+          <svg fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5 mx-auto">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+          </svg>
+        </button>
+        <button id="next-testimonial" class="w-10 h-10 rounded-full bg-red-500 text-white hover:bg-red-600 transition">
+          <svg fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5 mx-auto">
+            <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .my-slider-progress {
+    background: #ccc;
+    height: 4px;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .my-slider-progress-bar {
+    background: #F53855; 
+    height: 100%;
+    transition: width 400ms ease;
+    width: 0;
+  }
+  
+  .splide__arrow {
+      position: static !important;
+      transform: none !important;
+      margin: 0 !important;
+      width: auto !important;
+      height: auto !important;
+  }
+
+  .splide__pagination {
+      position: static !important;
+      display: flex;
+      justify-content: flex-start;
+      margin: 0 !important;
+      padding: 0 !important;
+      width: auto !important;
+       margin-right: auto !important;
+  }
+
+  .splide__pagination__page {
+      width: 12px; 
+      height: 12px; 
+      border-radius: 50%; 
+      background: #D8D8D8; 
+      margin: 0 4px; 
+      opacity: 1; 
+      transition: background-color 0.3s ease;
+  }
+
+  .splide__pagination__page.is-active {
+      background: #F53855;
+  }
+
+  .flex.justify-between.items-center.mt-8.md\:mt-10.px-4.md\:px-16 {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var splide = new Splide( '#testimonial-carousel', {
+      type: 'loop',     
+      perPage: 1,     
+      perMove: 1,       
+      gap: '24px',      
+      arrows: false,    
+      pagination: true, 
+      focus: 'center',  
+      drag: 'free',
+      snap: true,  
+    
+      autoplay: true,      
+      interval: 5000,
+      pauseOnHover: true, 
+      pauseOnFocus: true, 
+     
+      breakpoints: {
+        767: {
+          perPage: 1,
+          gap: '16px',
+          padding: { left: '16px', right: '16px' },
+        },
+        1023: { 
+          perPage: 1, 
+          gap: '20px',
+        },
+       
+        1200: { 
+            perPage: 1,
+        }
+      },
+    });
+   
+    var bar = document.querySelector( '#testimonial-carousel .my-slider-progress-bar' );
+
+    splide.on( 'mounted move', function () {
+      const totalSlides = splide.length;
+     
+      const totalPages = totalSlides;
+      const currentPage = splide.index;
+
+      let rate = 0;
+      if (totalPages > 0) { 
+          rate = Math.min((currentPage + 1) / totalPages, 1);
+      }
+      bar.style.width = String( 100 * rate ) + '%';
+
+      
+      const allCards = document.querySelectorAll('#testimonial-carousel .card');
+      
+      allCards.forEach(card => {
+        card.classList.remove('border-2', 'border-red-500');
+        card.classList.add('border');
+      });
+
+      
+      const activeCardIndex = splide.index;
+      if (allCards[activeCardIndex]) {
+        allCards[activeCardIndex].classList.remove('border');
+        allCards[activeCardIndex].classList.add('border-2', 'border-red-500');
+      }
+    });
+
+    
+    document.getElementById('prev-testimonial').addEventListener('click', function() {
+      splide.go('<');
+    });
+
+    document.getElementById('next-testimonial').addEventListener('click', function() {
+      splide.go('>');
+    });
+    
+    splide.on('mounted updated', function() {
+      const paginationPages = document.querySelectorAll('.splide__pagination__page');
+      paginationPages.forEach(page => {
+        page.style.backgroundColor = '';
+        page.style.width = '';
+        page.style.height = '';
+        page.style.margin = '';
+        page.style.borderRadius = '';
+        page.style.opacity = '';
+
+        page.classList.add('w-3', 'h-3', 'rounded-full', 'transition', 'cursor-pointer');
+        if (page.classList.contains('is-active')) {
+          page.classList.remove('bg-gray-300');
+          page.classList.add('bg-red-500');
+        } else {
+          page.classList.remove('bg-red-500');
+          page.classList.add('bg-gray-300');
+        }
+      });
+    });
+
+    splide.mount();
+  });
+</script>
   <!-- Subscribe Now Section -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
     <div class="bg-white rounded-xl shadow-xl p-6 md:p-10 flex flex-col md:flex-row items-center justify-between text-center md:text-left">

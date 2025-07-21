@@ -384,7 +384,6 @@
       margin: 0 !important;
       padding: 0 !important;
       width: auto !important;
-       margin-right: auto !important;
   }
 
   .splide__pagination__page {
@@ -400,110 +399,78 @@
   .splide__pagination__page.is-active {
       background: #F53855;
   }
-
-  .flex.justify-between.items-center.mt-8.md\:mt-10.px-4.md\:px-16 {
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-  }
 </style>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    var splide = new Splide( '#testimonial-carousel', {
-      type: 'loop',     
-      perPage: 1,     
-      perMove: 1,       
-      gap: '24px',      
-      arrows: false,    
-      pagination: true, 
-      focus: 'center',  
-      drag: 'free',
-      snap: true,  
-    
-      autoplay: true,      
-      interval: 5000,
-      pauseOnHover: true, 
-      pauseOnFocus: true, 
-     
-      breakpoints: {
-        767: {
-          perPage: 1,
-          gap: '16px',
-          padding: { left: '16px', right: '16px' },
-        },
-        1023: { 
-          perPage: 1, 
-          gap: '20px',
-        },
-       
-        1200: { 
-            perPage: 1,
-        }
-      },
-    });
-   
-    var bar = document.querySelector( '#testimonial-carousel .my-slider-progress-bar' );
+  var splide = new Splide('#testimonial-carousel', {
+    type: 'loop',
+    perPage: 3, 
+    perMove: 1,
+    gap: '24px',
+    arrows: false,
+    pagination: true,
+    focus: 'center',
+    drag: 'free',
+    snap: true,
+    autoplay: true,
+    interval: 5000,
+    pauseOnHover: true,
+    pauseOnFocus: true,
 
-    splide.on( 'mounted move', function () {
-      const totalSlides = splide.length;
-     
-      const totalPages = totalSlides;
-      const currentPage = splide.index;
-
-      let rate = 0;
-      if (totalPages > 0) { 
-          rate = Math.min((currentPage + 1) / totalPages, 1);
-      }
-      bar.style.width = String( 100 * rate ) + '%';
-
-      
-      const allCards = document.querySelectorAll('#testimonial-carousel .card');
-      
-      allCards.forEach(card => {
-        card.classList.remove('border-2', 'border-red-500');
-        card.classList.add('border');
-      });
-
-      
-      const activeCardIndex = splide.index;
-      if (allCards[activeCardIndex]) {
-        allCards[activeCardIndex].classList.remove('border');
-        allCards[activeCardIndex].classList.add('border-2', 'border-red-500');
-      }
-    });
-
-    
-    document.getElementById('prev-testimonial').addEventListener('click', function() {
-      splide.go('<');
-    });
-
-    document.getElementById('next-testimonial').addEventListener('click', function() {
-      splide.go('>');
-    });
-    
-    splide.on('mounted updated', function() {
-      const paginationPages = document.querySelectorAll('.splide__pagination__page');
-      paginationPages.forEach(page => {
-        page.style.backgroundColor = '';
-        page.style.width = '';
-        page.style.height = '';
-        page.style.margin = '';
-        page.style.borderRadius = '';
-        page.style.opacity = '';
-
-        page.classList.add('w-3', 'h-3', 'rounded-full', 'transition', 'cursor-pointer');
-        if (page.classList.contains('is-active')) {
-          page.classList.remove('bg-gray-300');
-          page.classList.add('bg-red-500');
-        } else {
-          page.classList.remove('bg-red-500');
-          page.classList.add('bg-gray-300');
-        }
-      });
-    });
-
-    splide.mount();
+    breakpoints: {
+  768: { 
+    perPage: 1,
+    gap: '20px',
+  },
+  639: { 
+    perPage: 1,
+    gap: '16px',
+    padding: { left: '16px', right: '16px' },
+  },
+}
   });
+  
+  var bar = document.querySelector('#testimonial-carousel .my-slider-progress-bar');
+  splide.on('mounted move', function () {
+    const totalSlides = splide.length;
+    const currentPage = splide.index;
+    const rate = totalSlides > 0 ? Math.min((currentPage + 1) / totalSlides, 1) : 0;
+    bar.style.width = `${100 * rate}%`;
+
+    const allCards = document.querySelectorAll('#testimonial-carousel .card');
+    allCards.forEach(card => {
+      card.classList.remove('border-2', 'border-red-500');
+      card.classList.add('border');
+    });
+
+    const activeCardIndex = splide.index;
+    if (allCards[activeCardIndex]) {
+      allCards[activeCardIndex].classList.remove('border');
+      allCards[activeCardIndex].classList.add('border-2', 'border-red-500');
+    }
+  });
+
+  document.getElementById('prev-testimonial').addEventListener('click', () => splide.go('<'));
+  document.getElementById('next-testimonial').addEventListener('click', () => splide.go('>'));
+
+  splide.on('mounted updated', function () {
+    const paginationPages = document.querySelectorAll('.splide__pagination__page');
+    paginationPages.forEach(page => {
+      page.classList.add('w-3', 'h-3', 'rounded-full', 'transition', 'cursor-pointer');
+      if (page.classList.contains('is-active')) {
+        page.classList.remove('bg-gray-300');
+        page.classList.add('bg-red-500');
+      } else {
+        page.classList.remove('bg-red-500');
+        page.classList.add('bg-gray-300');
+      }
+    });
+  });
+
+  splide.mount();
+});
+
 </script>
   <!-- Subscribe Now Section -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">

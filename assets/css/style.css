@@ -1,0 +1,44 @@
+  .my-slider-progress {
+    background: #ccc;
+    height: 4px;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .my-slider-progress-bar {
+    background: #F53855; 
+    height: 100%;
+    transition: width 400ms ease;
+    width: 0;
+  }
+  
+  .splide__arrow {
+      position: static !important;
+      transform: none !important;
+      margin: 0 !important;
+      width: auto !important;
+      height: auto !important;
+  }
+
+  .splide__pagination {
+      position: static !important;
+      display: flex;
+      justify-content: flex-start;
+      margin: 0 !important;
+      padding: 0 !important;
+      width: auto !important;
+  }
+
+  .splide__pagination__page {
+      width: 12px; 
+      height: 12px; 
+      border-radius: 50%; 
+      background: #D8D8D8; 
+      margin: 0 4px; 
+      opacity: 1; 
+      transition: background-color 0.3s ease;
+  }
+
+  .splide__pagination__page.is-active {
+      background: #F53855;
+  }
